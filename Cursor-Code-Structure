@@ -1,0 +1,95 @@
+cursor-clone/
+├── README.md
+├── package.json
+├── tsconfig.json
+│
+├── src/
+│   ├── main.tsx
+│   │
+│   ├── components/
+│   │   ├── Editor/
+│   │   │   ├── CodeEditor.tsx       # Monaco-based editor
+│   │   │   ├── InlineCompletion.tsx # AI suggestions
+│   │   │   ├── MultiCursor.tsx      # Multi-cursor editing
+│   │   │   └── Minimap.tsx          # Code minimap
+│   │   │
+│   │   ├── Sidebar/
+│   │   │   ├── FileExplorer.tsx     # File tree
+│   │   │   ├── SearchPanel.tsx      # Code search
+│   │   │   ├── GitPanel.tsx         # Version control
+│   │   │   └── AIPanel.tsx          # AI chat interface
+│   │   │
+│   │   ├── Terminal/
+│   │   │   ├── IntegratedTerminal.tsx
+│   │   │   └── CommandPalette.tsx
+│   │   │
+│   │   └── AIFeatures/
+│   │       ├── ChatInterface.tsx    # AI conversation
+│   │       ├── CodeExplainer.tsx    # Explain code blocks
+│   │       ├── BugFixer.tsx         # AI debugging
+│   │       └── Refactorer.tsx       # Code refactoring
+│   │
+│   ├── ai/
+│   │   ├── CodeCompletionAI.ts      # Autocomplete engine
+│   │   ├── ContextBuilder.ts        # Build file context
+│   │   ├── CodeAnalyzer.ts          # AST parsing
+│   │   ├── ErrorDetector.ts         # Find bugs
+│   │   └── RefactoringAI.ts         # Code improvements
+│   │
+│   ├── language/
+│   │   ├── parsers/
+│   │   │   ├── TypeScriptParser.ts  # TS/JS AST
+│   │   │   ├── PythonParser.ts      # Python AST
+│   │   │   ├── RustParser.ts        # Rust AST
+│   │   │   └── GoParser.ts          # Go AST
+│   │   │
+│   │   └── analyzers/
+│   │       ├── SymbolTable.ts       # Build symbol index
+│   │       ├── DependencyGraph.ts   # Import analysis
+│   │       └── TypeInference.ts     # Type checking
+│   │
+│   ├── models/
+│   │   ├── codellama-7b-4bit.onnx   # 1.5GB - Main code model
+│   │   ├── starcoder-1b.onnx        # 600MB - Mobile version
+│   │   ├── codebert.onnx            # 400MB - Code understanding
+│   │   ├── minilm-l6.onnx           # 80MB - Embeddings
+│   │   └── phi-2.onnx               # 1.5GB - Alternative LLM
+│   │
+│   ├── indexing/
+│   │   ├── CodeIndexer.ts           # Index codebase
+│   │   ├── EmbeddingStore.ts        # Vector database
+│   │   ├── SemanticSearch.ts        # Similarity search
+│   │   └── SymbolIndex.ts           # Fast symbol lookup
+│   │
+│   ├── lsp/
+│   │   ├── LanguageServer.ts        # LSP integration
+│   │   ├── Diagnostics.ts           # Error reporting
+│   │   ├── Hover.ts                 # Hover info
+│   │   └── GoToDefinition.ts        # Navigation
+│   │
+│   ├── storage/
+│   │   ├── WorkspaceStore.ts        # Save workspace state
+│   │   ├── ConversationStore.ts     # AI chat history
+│   │   └── IndexCache.ts            # Code index cache
+│   │
+│   └── utils/
+│       ├── ast-utils.ts             # AST traversal
+│       ├── tokenizer.ts             # Code tokenization
+│       ├── diff.ts                  # Code diff algorithm
+│       └── formatting.ts            # Code formatting
+│
+├── public/
+│   ├── language-configs/            # Syntax highlighting
+│   └── themes/                      # Editor themes
+│
+├── desktop/
+│   ├── main.ts
+│   └── file-watcher.ts              # Watch file changes
+│
+├── mobile/
+│   └── limited-editor.tsx           # Simplified mobile UI
+│
+└── tests/
+    ├── completion.test.ts
+    ├── context-building.test.ts
+    └── refactoring.test.ts
